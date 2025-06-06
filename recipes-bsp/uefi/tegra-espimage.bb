@@ -43,7 +43,7 @@ python sstate_report_unihash() {
 
     if report_unihash:
         ss = sstate_state_fromvars(d)
-        if ss['task'] in ['image_complete','image_qa']:
+        if ss['task'] == 'image_complete':
             os.environ['PSEUDO_DISABLED'] = '1'
         report_unihash(os.getcwd(), ss['task'], d)
 }
