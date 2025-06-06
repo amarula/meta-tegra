@@ -6,7 +6,7 @@ deltask do_unpack
 deltask do_patch
 
 SRC_URI = ""
-do_configure[depends] += "tegra-binaries:do_preconfigure"
+do_configure[depends] += "tegra-binaries:do_preconfigure tegra-binaries:do_unpack"
 do_populate_lic[depends] += "tegra-binaries:do_unpack"
 
 PACKAGE_ARCH = "${L4T_BSP_PKGARCH}"
