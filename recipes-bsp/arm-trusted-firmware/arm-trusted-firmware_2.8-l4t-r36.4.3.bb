@@ -27,8 +27,6 @@ PACKAGECONFIG ??= "optee"
 PACKAGECONFIG[trusty] = "SPD=trusty"
 PACKAGECONFIG[optee] = "SPD=opteed"
 
-TOOLCHAIN = "gcc"
-
 CFLAGS[unexport] = "1"
 LDFLAGS[unexport] = "1"
 AS[unexport] = "1"
